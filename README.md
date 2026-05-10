@@ -2,6 +2,12 @@
 
 React + Tailwind CSS web app for Operating Systems exam numericals.
 
+Live site:
+
+```text
+https://lifeknife10a.github.io/os-numericals-calculator/
+```
+
 ## Run Locally
 
 ```bash
