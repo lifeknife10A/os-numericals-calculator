@@ -162,31 +162,39 @@ function ModuleVisual({ moduleId }) {
     return (
       <div className="rounded-md bg-slate-50 p-3 dark:bg-slate-950">
         <svg viewBox="0 0 220 64" className="h-16 w-full" aria-hidden="true">
-          <circle cx="42" cy="18" r="13" fill="#0891b2" />
-          <circle cx="42" cy="46" r="13" fill="#0891b2" />
-          <rect x="154" y="8" width="34" height="24" rx="6" fill="#14b8a6" />
-          <rect x="154" y="36" width="34" height="24" rx="6" fill="#14b8a6" />
+          <circle cx="74" cy="16" r="11" fill="#0891b2" />
+          <circle cx="74" cy="48" r="11" fill="#0891b2" />
+          <rect x="138" y="6" width="28" height="20" rx="5" fill="#14b8a6" />
+          <rect x="138" y="38" width="28" height="20" rx="5" fill="#14b8a6" />
           <path
-            d="M55 18 C85 8, 118 8, 154 20"
+            d="M85 16 C103 6, 126 6, 138 16"
             fill="none"
             stroke="#f97316"
             strokeLinecap="round"
-            strokeWidth="4"
+            strokeWidth="3.5"
           />
           <path
-            d="M154 48 C116 62, 83 62, 55 46"
+            d="M138 48 C120 58, 97 58, 85 48"
             fill="none"
             stroke="#14b8a6"
             strokeLinecap="round"
-            strokeWidth="4"
+            strokeWidth="3.5"
           />
           <path
-            d="M55 46 C96 30, 118 30, 154 20"
+            d="M74 27 C61 38, 61 50, 74 48"
             fill="none"
             stroke="#ef4444"
             strokeDasharray="7 6"
             strokeLinecap="round"
-            strokeWidth="4"
+            strokeWidth="3.5"
+          />
+          <path
+            d="M166 16 C182 28, 182 38, 166 48"
+            fill="none"
+            stroke="#ef4444"
+            strokeDasharray="7 6"
+            strokeLinecap="round"
+            strokeWidth="3.5"
           />
         </svg>
       </div>

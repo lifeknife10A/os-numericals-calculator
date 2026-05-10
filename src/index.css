@@ -31,6 +31,26 @@ button {
   font: inherit;
 }
 
+@keyframes ragDashFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -42;
+  }
+}
+
+@keyframes ragNodePop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @layer components {
   .panel {
     @apply overflow-hidden rounded-xl border border-slate-200/80 bg-white/95 shadow-sm shadow-slate-200/60 dark:border-slate-700/80 dark:bg-slate-900/95 dark:shadow-black/30;
@@ -58,5 +78,40 @@ button {
 
   .exam-line {
     @apply rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-800 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  .rag-canvas {
+    background:
+      linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+      radial-gradient(circle at center, rgba(8, 145, 178, 0.12), transparent 42%),
+      #eef2f7;
+    background-size:
+      30px 30px,
+      30px 30px,
+      100% 100%,
+      100% 100%;
+  }
+
+  .dark .rag-canvas {
+    background:
+      linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at center, rgba(8, 145, 178, 0.13), transparent 42%),
+      #070a12;
+    background-size:
+      30px 30px,
+      30px 30px,
+      100% 100%,
+      100% 100%;
+  }
+
+  .rag-edge-flow {
+    stroke-dasharray: 14 8;
+    animation: ragDashFlow 1.2s linear infinite;
+  }
+
+  .rag-node-pop {
+    animation: ragNodePop 0.24s ease-out both;
   }
 }

@@ -78,12 +78,12 @@ function findCycle(nodes, edges) {
         let currentNode = node;
 
         while (currentNode !== nextNode && currentNode !== undefined) {
-          cycle.unshift(currentNode);
+          cycle.push(currentNode);
           currentNode = parent[currentNode];
         }
 
         cycle.push(nextNode);
-        return cycle;
+        return cycle.reverse();
       }
     }
 
