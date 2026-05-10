@@ -32,6 +32,7 @@ The generated `dist` folder can be deployed on Vercel, Netlify, or any static ho
 - Disk Scheduling: FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK
 - Banker's Algorithm
 - Deadlock Detection
+- Deadlock Resource Allocation Graph
 - Memory Allocation: First Fit, Best Fit, Worst Fit
 - Paging Address Translation
 - Segmentation Address Translation
@@ -47,6 +48,7 @@ The generated `dist` folder can be deployed on Vercel, Netlify, or any static ho
 | Disk Scheduling | Queue `98 183 37 122 14 124 65 67`, Head `53`, Range `0-199` |
 | Banker | Allocation `0 1 0 / 2 0 0 / 3 0 2 / 2 1 1 / 0 0 2`, Available `3 3 2` |
 | Deadlock Detection | Allocation and Request matrices from the Example button |
+| Resource Allocation Graph | Processes `3`, Resources `1 1 1`, Allocation `R0 P1 / R1 P2 / R2 P0`, Request `P0 R0 / P1 R1 / P2 R2` |
 | Memory Allocation | Blocks `100 500 200 300 600`, Processes `212 417 112 426` |
 | Paging Address | Logical address `2500`, Page size `1000`, Page table `0 5 / 1 8 / 2 3 / 3 6` |
 | Segmentation | Segment `2`, Offset `400`, Segment table `0 219 600 / 1 2300 14 / 2 90 500 / 3 1327 580` |

@@ -7,6 +7,7 @@ import MemoryAllocationCalculator from "./modules/MemoryAllocationCalculator";
 import PageReplacementCalculator from "./modules/PageReplacementCalculator";
 import PagingAddressCalculator from "./modules/PagingAddressCalculator";
 import PagingNumericalsCalculator from "./modules/PagingNumericalsCalculator";
+import ResourceAllocationGraphCalculator from "./modules/ResourceAllocationGraphCalculator";
 import SegmentationCalculator from "./modules/SegmentationCalculator";
 import { clearRecentCalculations, getRecentCalculations } from "./utils/storage";
 import {
@@ -19,6 +20,7 @@ import {
   Layers,
   LayoutDashboard,
   Moon,
+  Network,
   ShieldCheck,
   Sun,
 } from "lucide-react";
@@ -63,6 +65,14 @@ const modules = [
     description: "Work vector, Finish status, and deadlocked processes.",
     component: DeadlockDetectionCalculator,
     icon: GitBranch,
+  },
+  {
+    id: "resource-allocation-graph",
+    title: "Resource Allocation Graph",
+    group: "Deadlock",
+    description: "Draw request and allocation edges, detect cycles, and explain deadlock risk.",
+    component: ResourceAllocationGraphCalculator,
+    icon: Network,
   },
   {
     id: "memory-allocation",
@@ -144,6 +154,41 @@ function ModuleVisual({ moduleId }) {
             key={index}
           />
         ))}
+      </div>
+    );
+  }
+
+  if (moduleId === "resource-allocation-graph") {
+    return (
+      <div className="rounded-md bg-slate-50 p-3 dark:bg-slate-950">
+        <svg viewBox="0 0 220 64" className="h-16 w-full" aria-hidden="true">
+          <circle cx="42" cy="18" r="13" fill="#0891b2" />
+          <circle cx="42" cy="46" r="13" fill="#0891b2" />
+          <rect x="154" y="8" width="34" height="24" rx="6" fill="#14b8a6" />
+          <rect x="154" y="36" width="34" height="24" rx="6" fill="#14b8a6" />
+          <path
+            d="M55 18 C85 8, 118 8, 154 20"
+            fill="none"
+            stroke="#f97316"
+            strokeLinecap="round"
+            strokeWidth="4"
+          />
+          <path
+            d="M154 48 C116 62, 83 62, 55 46"
+            fill="none"
+            stroke="#14b8a6"
+            strokeLinecap="round"
+            strokeWidth="4"
+          />
+          <path
+            d="M55 46 C96 30, 118 30, 154 20"
+            fill="none"
+            stroke="#ef4444"
+            strokeDasharray="7 6"
+            strokeLinecap="round"
+            strokeWidth="4"
+          />
+        </svg>
       </div>
     );
   }
